@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { searchGithub, searchGithubUser } from "../api/API";
 import UserCard from "../components/UserCard";
-import type Candidate from "../interfaces/CandidateInterface";
+import type { Candidate } from "../interfaces/CandidateInterface";
 
 type User = {
   login: string;
