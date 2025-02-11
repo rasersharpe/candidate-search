@@ -72,6 +72,7 @@ const CandidateSearch = () => {
         name={user.name}
         login={user.login}
         location={user.location}
+        email={user.email}
         company={user.company}
         bio={user.bio}
       />
