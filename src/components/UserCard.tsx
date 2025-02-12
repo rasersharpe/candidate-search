@@ -29,7 +29,7 @@ const UserCard = (props: CandidateProps) => {
             <p>Location: {props.location ? props.location : "N/A"}</p>
             <p>Company: {props.company ? props.company : "N/A"}</p>
             <p>
-              Email:
+              Email:{" "}
               {props.email ? (
                 <a href={`mailto:${props.email}`} className="email-link">
                   {props.email}
