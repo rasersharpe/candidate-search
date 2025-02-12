@@ -52,18 +52,24 @@ const SavedCandidates = () => {
                 <td>
                   <img
                     className="tableAvatar"
-                    src={candidate.avatar_url}
-                    alt={candidate.name}
+                    src={candidate.avatar_url ? candidate.avatar_url : "N/A"}
+                    alt={candidate.login}
                     width="50"
                     height="50"
                   />
                 </td>
-                <td>{candidate.name}</td>
-                <td>{candidate.login}</td>
-                <td>{candidate.location}</td>
-                <td>{candidate.email}</td>
-                <td>{candidate.company}</td>
-                <td>{candidate.bio}</td>
+                <td>{candidate.name ? candidate.name : "N/A"}</td>
+                <td>{candidate.login ? candidate.login : "N/A"}</td>
+                <td>{candidate.location ? candidate.location : "N/A"}</td>
+                <td>
+                  {candidate.email ? (
+                    <a href={`mailto:${candidate.email}`}>{candidate.email}</a>
+                  ) : (
+                    "N/A"
+                  )}
+                </td>
+                <td>{candidate.company ? candidate.company : "N/A"}</td>
+                <td>{candidate.bio ? candidate.bio : "N/A"}</td>
                 <td>
                   <button
                     className="actionButton"
