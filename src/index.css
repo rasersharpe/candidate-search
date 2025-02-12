@@ -88,6 +88,10 @@ main {
   align-items: center;
 }
 
+table {
+  width: 80%;
+}
+
 tr {
   border-radius: 10px;
   background-color: #000;
@@ -121,4 +125,67 @@ tbody tr:nth-child(odd) {
 .table {
   width: 80vw;
   table-layout: fixed;
+}
+
+.userCard {
+  height: auto;
+  width: 20rem;
+  background-color: #000000;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.userImage {
+  height: 20rem;
+  width: auto;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.userCard__name {
+  margin: 1rem;
+}
+
+.userCard__info {
+  margin: 1rem;
+}
+
+.nextButtons {
+  width: 18rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.plusButton {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  padding: 0;
+  font-size: 3rem;
+  padding-bottom: 0.5rem;
+  background-color: #0e780c;
+}
+.minusButton {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  padding: 0;
+  font-size: 3rem;
+  padding-bottom: 0.5rem;
+  background-color: #de1111;
+}
+
+.tableAvatar {
+  height: 6rem;
+  width: 6rem;
+}
+
+.actionButton {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  padding: 0;
+  background-color: #cf1414;
+  font-size: 3rem;
 }

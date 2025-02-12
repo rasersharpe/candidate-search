@@ -3,6 +3,8 @@ import { searchGithub, searchGithubUser } from "../api/API";
 import UserCard from "../components/UserCard";
 import type { Candidate } from "../interfaces/CandidateInterface";
 
+import "../index.css";
+
 type User = {
   login: string;
 };
@@ -65,8 +67,6 @@ const CandidateSearch = () => {
   return (
     <>
       <h1>CandidateSearch</h1>
-      <button onClick={handleNextUserAndSave}>+</button>
-      <button onClick={handleNextUser}>-</button>
       <UserCard
         avatar_url={user.avatar_url}
         name={user.name}
@@ -76,6 +76,14 @@ const CandidateSearch = () => {
         company={user.company}
         bio={user.bio}
       />
+      <div className="nextButtons">
+        <button className="plusButton" onClick={handleNextUserAndSave}>
+          +
+        </button>
+        <button className="minusButton" onClick={handleNextUser}>
+          -
+        </button>
+      </div>
     </>
   );
 };

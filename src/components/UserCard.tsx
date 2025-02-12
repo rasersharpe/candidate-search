@@ -15,15 +15,17 @@ const UserCard = (props: CandidateProps) => {
   return (
     <div>
       <figure className="userCard">
-        <img src={props.avatar_url} alt={props.name} />
+        <img className="userImage" src={props.avatar_url} alt={props.name} />
         <figcaption>
-          <h2>
+          <h2 className="userCard__name">
             {props.name} <span>({props.login})</span>
           </h2>
-          <p>Location: {props.location}</p>
-          <p>Company: {props.company}</p>
-          <p>Email: {props.email}</p>
-          <p>Bio: {props.bio}</p>
+          <div className="userCard__info">
+            <p>Location: {props.location}</p>
+            <p>Company: {props.company}</p>
+            <p>Email: {props.email}</p>
+            <p>Bio: {props.bio}</p>
+          </div>
         </figcaption>
       </figure>
     </div>
